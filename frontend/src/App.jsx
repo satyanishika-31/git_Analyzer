@@ -34,7 +34,7 @@ function App() {
 1
 
   return (
-    <div className="border-mauve-600  h-screen w-screen bg-mauve-100 ">
+    <div className="border-mauve-600  h-screen w-screen bg-mauve-100 lg:p-50 lg:pt-10">
       <div className="   m-2  p-2 " >
 
         <form onSubmit={handlesubmit}>
