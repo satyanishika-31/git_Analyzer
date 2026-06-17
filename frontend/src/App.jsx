@@ -31,41 +31,42 @@ function App() {
 
   }
 
-
+1
 
   return (
-    <div className=" p-10 m-10">
-      <div className=" p-10  w-full " >
+    <div className="border-mauve-600  h-screen w-screen bg-mauve-100 ">
+      <div className="   m-2  p-2 " >
 
         <form onSubmit={handlesubmit}>
-          <p className="text-xl sm:text-2xl md:text-4xl text-mauve-600 font-extrabold mb-4 capitalize">
+          <p className="font-extrabold text-xl text-center  text-mauve-600">
             Users GitHub Details Analyzer
           </p>
 
-          <div className=" w-fit rounded-2xl h-fit">
+          <div className="text-center border mt-4 m-auto rounded w-fit ">
 
             <input
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className=" pw-full  sm:max-w-xs md:max-w-md lg:max-w-lg p-2  bg-white text-base  sm:text-lg  rounded-2xl text-mauve-800  font-bold    border-2 "
+              onChange={(e) => setUsername(e.target.value)} 
+              className="  px-4 py-2 max-[394px]:px-2 max-[394px]:py-1 max-[394px]:text-xs max-[394px]:w-35 max-[394px]:h-6 "
             />
             <button
               type="submit"
-              className="w-full sm:w-fit p-3 bg-mauve-900 ml-1 sm:max-w-xl rounded-2xl text-lg sm:text-xl font-bold text-white" >
+              className=" bg-mauve-700 text-white rounded- px-4 py-2  " >
               Submit
             </button>
           </div>
         </form>
-        {/* Spinner while loading */}
-        {loading && (
-          <div className="flex justify-center items-center mt-10">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-mauve-600"></div>
-          </div>
-        )}
-        {/* Error message */}
+         {/* Error message */}
         {error && <p className="text-red-600">{error}</p>}
 
+        {/* Spinner while loading */}
+        {loading && (
+          <div className="">
+            <div className=" animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 m-auto mt-10"></div>
+          </div>
+        )}
+       
       </div>
       {info && !loading && !error && (
         <ProfileCard
